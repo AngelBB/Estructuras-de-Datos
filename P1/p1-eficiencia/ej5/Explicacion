@@ -1,0 +1,2 @@
+La eficiencia en el mejor de los casos seria lineal O(n). Ya que recorre todos los elementos pero una sola vez.
+

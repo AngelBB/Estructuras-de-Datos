@@ -1,0 +1,42 @@
+plot ’ordenBeje.dat’ title
+’Eficiencia Burbuja’ with points
+
+gnuplot> set xlabel "Tamaño"
+gnuplot> set ylabel "Tiempo (seg)"
+
+
+Regresiones:
+-----
+n²
+-----
+gnuplot> f(x) = a * x * x (cuando son cuadraticas)
+gnuplot> fit f(x) ’ordenBeje.dat’ via a
+gnuplot> plot ’ordenBeje.dat’, f(x) title ’Curva ajustada’
+
+-----
+Lineal
+-----
+f(x) = a*x + b
+
+
+-----
+ es logaritmica o peor que n² ??
+-----
+Funciones mas complejas (con logaritmos)
+gnuplot> f(x) = a * x * x + b* log(x)f
+gnuplot> fit f(x) ’ordenBeje.dat’ via a,b
+
+
+Salvar los resultados
+gnuplot> set terminal png
+gnuplot> set output ’salida.png’
+gnuplot> replot
+
+
+plot f(x) title 'mejor caso' with lines linestyle 1, g(x) title 'peor caso' with lines linestyle 2, h(x) title 'normal' with lines linestyle 3
+
+plot 'mejorcaso.dat', f(x) title 'mejor caso' with lines linestyle 1, 'peorcaso.dat', g(x) title 'peor caso' with lines linestyle 2, 'tiempos_ordenacion.dat', h(x) title 'normal' with lines linestyle 3
+
+
+plot 'mejorcaso.dat' title 'mejor caso' with lines linestyle 1, 'peorcaso.dat' title 'peor caso' with lines linestyle 2, 'tiempos_ordenacion.dat' title 'normal' with lines linestyle 3
+

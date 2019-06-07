@@ -1,0 +1,49 @@
+
+
+*******************************************************************************
+Mon Sep 25 21:36:14 2017
+
+
+FIT:    data read from 'burbuja.dat'
+        format = z
+        #datapoints = 10000
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x + b
+BREAK: Need via and either parameter list or file
+
+*******************************************************************************
+Mon Sep 25 21:36:22 2017
+
+
+FIT:    data read from 'burbuja.dat'
+        format = z
+        #datapoints = 10000
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = a*x + b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 3.3338433359e+15   0.00e+00  4.08e+05    1.000000e+00   1.000000e+00
+   8 1.8369100863e-04  -4.12e-02  4.08e-03    2.259631e-09   8.474204e-06
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 0.000183691
+rel. change during last iteration : -4.12401e-07
+
+degrees of freedom    (FIT_NDF)                        : 9998
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000135546
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.83728e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 2.25963e-09      +/- 4.695e-12    (0.2078%)
+b               = 8.4742e-06       +/- 2.711e-06    (31.99%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b              -0.866  1.000 
